@@ -42,30 +42,30 @@ screen = pygame.display.set_mode((800,400))
 pygame.display.set_caption('Runner')
 
 clock = pygame.time.Clock()
-test_font = pygame.font.Font("internal\\idkjust\\font\\pixeltype.ttf", 50)
+test_font = pygame.font.Font("font\\pixeltype.ttf", 50)
 game_active = False
 start_time = 0
 score = 0
 
-sky_surface = pygame.image.load("internal\\idkjust\\img\\images.jpg").convert()
-ground_surface = pygame.image.load("internal\\idkjust\\img\\ground.png").convert()
+sky_surface = pygame.image.load("img\\images.jpg").convert()
+ground_surface = pygame.image.load("img\\ground.png").convert()
 sky_surface = pygame.transform.scale(sky_surface,(800, 400))
 
 #score_surf = test_font.render('My game', False , (64,64,64))
 #score_rect = score_surf.get_rect(center = (400,50))
 #obstacle
-snail_surface = pygame.image.load("internal\\idkjust\\img\\snail1.png").convert_alpha()
+snail_surface = pygame.image.load("img\\snail1.png").convert_alpha()
 
-fly_surf = pygame.image.load("internal\\idkjust\\img\\fly1.png").convert()
+fly_surf = pygame.image.load("img\\fly1.png").convert()
 
 obstacle_rect_list = []
 
-player_surf = pygame.image.load("internal\\idkjust\\img\\player_walk_1.png").convert_alpha()
+player_surf = pygame.image.load("img\\player_walk_1.png").convert_alpha()
 player_rect = player_surf.get_rect(midbottom = (80,300))
 player_gravity = 0
 
 #intro screen
-player_stand = pygame.image.load("internal\\idkjust\\img\\player_stand.png").convert_alpha()
+player_stand = pygame.image.load("img\\player_stand.png").convert_alpha()
 player_stand = pygame.transform.rotozoom(player_stand,0,2)
 player_stand_rect = player_stand.get_rect(center = (400,200))
 
